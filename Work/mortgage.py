@@ -29,7 +29,7 @@ while principal > 0:
         total_paid = total_paid + payment
 
 
-    print(months,round(total_paid,2),round(principal,2))
+    print(f"{months},{total_paid:0.2f}{principal:0.2f}")
 
     months=months+1
 
@@ -37,5 +37,5 @@ while principal > 0:
 
     
 
-print('Total paid', round(total_paid,2))
-print('Months',310)
+print(f'Total paid{total_paid:.2f}')
+print(f'Months{months}')
