@@ -6,17 +6,9 @@ import os
 import gzip
 
 
-f=gzip.open('Data/portfolio.csv.gz', 'rt')
-headers=next(f).strip().split(',')
-print(headers)
+with open('Data/portfolio.csv', 'rt') as file:
+    for data in file:
+        print(data)
+    
 
-sum=0
-for line in f:
-    row=line.split(',')
-    sum=sum+int(row[1])*float(row[2])
-
-
-
-print('Total Cost', sum)
-f.close()
 
